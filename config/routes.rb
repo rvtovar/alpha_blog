@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#index"
   resources :articles
+  resources :users, only: [ :create, :show, :index,:edit, :update ]
+
+  get "signup" => "users#new"
 end
