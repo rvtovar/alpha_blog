@@ -3,7 +3,7 @@
   <thead>
   <tr class="w-full bg-gray-100">
     <th class="py-2 px-4 border-b text-left">Title</th>
-    <th class="py-2 px-4 border-b text-left">Body</th>
+    <th class="py-2 px-4 border-b text-left">Author</th>
 
     <th class="py-2 px-4 border-b text-left">Links</th>
   </tr>
@@ -14,7 +14,7 @@
       <td class="py-2 px-4 border-b">
         <%= article.title %>
       </td>
-      <td class="py-2 px-4 border-b"><%= article.content %></td>
+      <td class="py-2 px-4 border-b">By <%= article.user.username %></td>
 
       <td class="py-2 px-4 border-b">
         <%= link_to 'See Article', article_path(article), class: "text-blue-500 hover:underline" %>
