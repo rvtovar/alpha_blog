@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d7a2cbad-ed07-4e50-982a-4afd3bd69254" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/users/index.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_navbar.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +81,8 @@
       <workItem from="1730477644311" duration="95000" />
       <workItem from="1730477741609" duration="878000" />
       <workItem from="1730479617127" duration="219000" />
+      <workItem from="1730482557135" duration="21000" />
+      <workItem from="1730483070114" duration="263000" />
     </task>
     <servers />
   </component>
