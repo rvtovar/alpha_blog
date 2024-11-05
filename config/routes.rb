@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   # root "posts#index"
   root "pages#index"
   resources :articles
-  resources :users, only: [ :create, :show, :index, :edit, :update ]
+  resources :users, only: [ :create, :show, :index, :edit, :update, :destroy ]
 
   get "signup" => "users#new"
+  get "login" => "sessions#new"
+  post "login" => "sessions#create"
+  delete "logout", to: "sessions#destroy"
 end

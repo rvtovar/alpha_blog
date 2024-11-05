@@ -8,17 +8,30 @@
   </div>
 
 </div>
-<div class="mt-4 flex space-x-2">
-  <%= link_to "Edit", edit_user_path(@user), class: "bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700" %>
-  <%= link_to "Delete", user_path(@user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700" %>
-</div>
+<%if logged_in?%>
+  <div class="mt-4 flex space-x-2">
+  <%if @user == @current_user%>
+
+    <%= link_to "Edit", edit_user_path(@user), class: "bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700" %>
+    <%= link_to "Delete", user_path(@current_user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700" %>
+  <%end %>
+  <% if @current_user.admin?%>
+    <%= link_to "Delete User", user_path(@user), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-700" %>
+  <% end %>
+  </div>
+<%end %>
 
 <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Articles by <%= @user.username %></h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <% @user.articles.each do |article| %>
+<div class="flickr_pagination mb-6">
+  <%= will_paginate @articles, :container => false %>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+  <% @articles.each do |article| %>
     <div class="bg-white p-4 rounded-lg shadow-md">
       <h3 class="text-xl font-bold mb-2"><%= link_to article.title, article_path(article) %></h3>
       <p class="text-gray-700"><%= truncate(article.content, length: 100) %></p>
+      <p class="text-gray-500 text-sm">Created <%= time_ago_in_words(article.created_at) %> ago</p>
+      <p class="text-gray-500 text-sm">Updated <%= time_ago_in_words(article.updated_at) %> ago</p>
     </div>
   <% end %>
 </div>

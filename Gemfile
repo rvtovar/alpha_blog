@@ -58,3 +58,4 @@ end
 
 gem "tailwindcss-rails", "~> 3.0"
 gem "overcommit", require: false
+gem 'will_paginate', '~> 4.0'
